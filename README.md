@@ -9,6 +9,7 @@ action.yml:
   uses: cvpkg/googletest-action@v0.1
   with:
     googletest_tag: 'release-1.11.0' # default is 'v1.11.0'
+    # an env var 'googletest_tag' will be defined.
 ```
 
 ## Use in CMakeLists.txt

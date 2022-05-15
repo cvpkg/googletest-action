@@ -30,7 +30,6 @@ jobs:
 
       - name: configure test
         run: |
-          cmake -DCMAKE_BUILD_TYPE=Release . -B build
           if [ "$RUNNER_OS" == "Windows" ]; then
             cmake -T v143,host=x64 -A x64 . -B build
           else

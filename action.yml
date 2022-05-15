@@ -13,6 +13,7 @@ runs:
       run: git clone https://github.com/google/googletest -b ${{ inputs.googletest_tag }} --depth 1
       shell: bash
     
+    # https://docs.github.com/en/actions/using-workflows/workflow-commands-for-github-actions#setting-an-environment-variable
     - name: Set env
       run: echo "googletest_tag=${{ inputs.googletest_tag }}" >> $GITHUB_ENV
       shell: bash
