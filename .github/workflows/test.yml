@@ -49,7 +49,7 @@ jobs:
       - name: run test
         run: |
           if [ "$RUNNER_OS" == "Windows" ]; then
-            .\testbed.exe
+            ./Release/testbed.exe
           else
             ./testbed
           fi
