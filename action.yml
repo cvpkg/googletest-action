@@ -21,9 +21,9 @@ runs:
         if [ "$RUNNER_OS" == "Windows" ]; then
           cmake . -B build -T v143,host=x64 -A x64 -DCMAKE_INSTALL_PREFIX="$GITHUB_WORKSPACE/artifacts/googletest/${{ inputs.googletest_tag }}/windows-x64" -DBUILD_GMOCK=OFF -Dgtest_force_shared_crt=ON
         elif [ "$RUNNER_OS" == "Linux" ]; then
-          cmake . -B build -G Ninja -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=$GITHUB_WORKSPACE/artifacts/googletest/${{ googletest_tag }}/linux-x64 -DCMAKE_BUILD_TYPE=Release -DBUILD_GMOCK=OFF -DCMAKE_POSITION_INDEPENDENT_CODE=ON
+          cmake . -B build -G Ninja -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=$GITHUB_WORKSPACE/artifacts/googletest/${{ inputs.googletest_tag }}/linux-x64 -DCMAKE_BUILD_TYPE=Release -DBUILD_GMOCK=OFF -DCMAKE_POSITION_INDEPENDENT_CODE=ON
         elif [ "$RUNNER_OS" == "macOS" ]; then
-          cmake . -B build -G Ninja -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=$GITHUB_WORKSPACE/artifacts/googletest/${{ googletest_tag }}/mac-x64 -DCMAKE_BUILD_TYPE=Release -DBUILD_GMOCK=OFF -DCMAKE_POSITION_INDEPENDENT_CODE=ON
+          cmake . -B build -G Ninja -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=$GITHUB_WORKSPACE/artifacts/googletest/${{ inputs.googletest_tag }}/mac-x64 -DCMAKE_BUILD_TYPE=Release -DBUILD_GMOCK=OFF -DCMAKE_POSITION_INDEPENDENT_CODE=ON
         fi
       working-directory: googletest
       shell: bash
