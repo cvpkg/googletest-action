@@ -20,7 +20,7 @@ jobs:
       - name: Install googletest
         uses: ./
         with:
-          googletest_tag: 'v1.11.0'
+          googletest_tag: 'release-1.11.0'
       - name: configure test
         run: |
           cmake -DCMAKE_BUILD_TYPE=Release . -B build

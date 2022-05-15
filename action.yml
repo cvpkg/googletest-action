@@ -5,7 +5,7 @@ inputs:
   googletest_tag:
     description: 'The tag(release version) of googletest'
     required: true
-    default: 'v1.11.0' # or master
+    default: 'release-1.11.0' # or master
 runs:
   using: "composite"
   steps:

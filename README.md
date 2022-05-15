@@ -8,7 +8,7 @@ action.yml:
 - name: Install googletest
   uses: cvpkg/googletest-action@v0.1
   with:
-    googletest_tag: 'v1.11.0' # default is 'v1.11.0'
+    googletest_tag: 'release-1.11.0' # default is 'v1.11.0'
 ```
 
 ## Use in CMakeLists.txt
