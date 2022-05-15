@@ -18,10 +18,16 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
+
       - name: Install googletest
         uses: ./
         with:
           googletest_tag: 'release-1.11.0'
+
+      - name: List environment variables
+        run: env
+        if: runner.os != 'Windows'
+
       - name: configure test
         run: |
           cmake -DCMAKE_BUILD_TYPE=Release . -B build
