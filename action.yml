@@ -23,9 +23,9 @@ runs:
       run: |
         if [ "$RUNNER_OS" == "Windows" ]; then
           cmake ${compiler} . -B build -T v143,host=x64 -A x64 -DCMAKE_INSTALL_PREFIX="$GITHUB_WORKSPACE/artifacts/googletest/${googletest_tag}/windows-x64" -DBUILD_GMOCK=OFF -Dgtest_force_shared_crt=ON
-        else if [ "$RUNNER_OS" == "Linux" ]; then
+        elif [ "$RUNNER_OS" == "Linux" ]; then
           cmake ${compiler} -DCMAKE_BUILD_TYPE=Release . -B build -G Ninja -DCMAKE_INSTALL_PREFIX=$GITHUB_WORKSPACE/artifacts/googletest/${googletest_tag}/linux-x64 -DCMAKE_BUILD_TYPE=Release -DBUILD_GMOCK=OFF -DCMAKE_POSITION_INDEPENDENT_CODE=ON
-        else if [ "$RUNNER_OS" == "macOS" ]; then
+        elif [ "$RUNNER_OS" == "macOS" ]; then
           cmake ${compiler} -DCMAKE_BUILD_TYPE=Release . -B build -G Ninja -DCMAKE_INSTALL_PREFIX=$GITHUB_WORKSPACE/artifacts/googletest/${googletest_tag}/mac-x64 -DCMAKE_BUILD_TYPE=Release -DBUILD_GMOCK=OFF -DCMAKE_POSITION_INDEPENDENT_CODE=ON
         fi
       working-directory: googletest
