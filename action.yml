@@ -12,6 +12,13 @@ runs:
     - name: clone googletest
       run: git clone https://github.com/google/googletest -b ${{ inputs.googletest_tag }} --depth 1
       shell: bash
+    
+    - name: Set env
+      run: echo "googletest_tag=${{ inputs.googletest_tag }}" >> $GITHUB_ENV
+      shell: bash
+    - name: Test env
+      run: echo $googletest_tag
+      shell: bash
 
     - name: Setup Ninja
       uses: seanmiddleditch/gha-setup-ninja@v3
