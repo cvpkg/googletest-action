@@ -47,7 +47,11 @@ jobs:
         working-directory: test/build
         shell: bash
       - name: run test
-        run:
-          ./testbed
+        run: |
+          if [ "$RUNNER_OS" == "Windows" ]; then
+            .\testbed.exe
+          else
+            ./testbed
+          fi
         working-directory: test/build
         shell: bash
