@@ -1,5 +1,7 @@
 # googletest-action
 
+[![test](https://github.com/cvpkg/googletest-action/actions/workflows/test.yml/badge.svg)](https://github.com/cvpkg/googletest-action/actions/workflows/test.yml)
+
 Install googletest on Github Actions, provided as re-usable "configure-build-install-export-import" steps.
 
 ## Use in workflows yml
